@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Toggle from "../components/Toggle"
 
 const Signup = () =>(
     <section className=' relative z-[99] mt-3 flex justify-center w-screen'>
@@ -9,6 +10,7 @@ const Signup = () =>(
                 <h1 className="text-xl mb-6 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                     Create your account
                 </h1>
+                <Toggle/>
                 <form className="space-y-4" action="#">
                     <div>
                         <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>

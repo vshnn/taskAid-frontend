@@ -8,7 +8,7 @@ const Toggle = () => {
     };
   
     return (
-      <div className=" border-2 relative z-[99] text-xs w-fit bg-white rounded-full mb-3">
+      <div className=" border-white border-2 relative z-[99] text-xs w-fit bg-white rounded-full mb-3">
         <button
           onClick={toggleOption}
           className={`px-4 py-2 rounded-full ${
@@ -21,7 +21,7 @@ const Toggle = () => {
         </button>
         <button 
           onClick={toggleOption}
-          className={`px-6 py-2 rounded-full ${
+          className={`px-4 py-2 rounded-full ${
             selectedOption === 'Admin'
             ? 'bg-blue-500 text-white'
             : 'bg-white text-gray-700'
