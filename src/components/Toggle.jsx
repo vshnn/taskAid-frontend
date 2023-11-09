@@ -8,7 +8,7 @@ const Toggle = () => {
     };
   
     return (
-      <div className="relative z-[99] text-sm w-fit rounded-full gap-3 flex mb-3">
+      <div className=" border-2 relative z-[99] text-xs w-fit bg-white rounded-full mb-3">
         <button
           onClick={toggleOption}
           className={`px-4 py-2 rounded-full ${
