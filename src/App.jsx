@@ -4,9 +4,13 @@ import About from './pages/About.jsx'
 import Footer from './pages/Footer.jsx'
 import Login from './pages/Login.jsx'
 import Signup from './pages/signup.jsx'
-import { Route, Routes } from 'react-router-dom'
-import Toggle from './components/Toggle.jsx'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Contact from './pages/Contact.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+
+
+
+
 
 const App = () =>(
   <>
@@ -19,6 +23,8 @@ const App = () =>(
           <Route path="/login" element = {<Login/>} />
           <Route path="/signup" element = {<Signup/>} />
           <Route path="/contact" element = {<Contact/>} /> 
+          <Route path="/Dashboard" element = {<Dashboard/>} />
+          <Route path="*" element={<Navigate to="/Dashboard" />} />    
         </Routes>
       </div>
       <Footer></Footer>

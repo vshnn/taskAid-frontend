@@ -1,4 +1,4 @@
-import React from "react"
+
 import { Link } from "react-router-dom"
 import Toggle from "../components/Toggle"
 
@@ -7,7 +7,7 @@ const Signup = () =>(
         <div className=" w-3/4 md:max-w-lg sm:max-w-md rounded-lg shadow dark:border dark:bg-gray-800 dark:border-gray-700">
             
             <div className="px-8 py-6 ">
-                <h1 className="text-xl mb-6 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                <h1 className="text-xl mb-6 font-semibold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                     Create your account
                 </h1>
                 <Toggle/>

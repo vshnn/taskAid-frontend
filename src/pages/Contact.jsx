@@ -1,9 +1,8 @@
-import React from "react";
-import Toggle from "../components/Toggle";
+
 
 const Contact = () =>{
     <div>
- 
+        display contact details
     </div>
 }
 
