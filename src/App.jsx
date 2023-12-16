@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Navbar from './pages/Navbar.jsx'
 import About from './pages/About.jsx'
 import Footer from './pages/Footer.jsx'
@@ -14,7 +14,7 @@ import Dashboard from './pages/Dashboard.jsx'
 
 const App = () =>(
   <>
-    <div className=" font-[poppins] min-h-screen bg-slate-950 overflow-hidden flex flex-col">
+    <div className=" min-h-screen bg-slate-950 overflow-hidden flex flex-col">
     <Navbar/>
     <div className="container">
         <Routes>
