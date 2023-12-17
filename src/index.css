@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body{
+  font-family: 'Poppins', sans-serif;
   color: white;
   box-sizing: border-box;
   margin: 0;
