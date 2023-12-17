@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './pages/Navbar.jsx'
 import About from './pages/About.jsx'
 import Footer from './pages/Footer.jsx'
