@@ -6,7 +6,7 @@ import Signup from './pages/signup.jsx'
 
 import {Route, Routes, Outlet, Navigate } from 'react-router-dom'
 import Contact from './pages/Contact.jsx'
-import Dashboard from './Dashboard.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 import ErrorPage from './Error-page.jsx'
 
 
