@@ -1,12 +1,12 @@
-import Navbar from './pages/Navbar.jsx'
-import About from './pages/About.jsx'
-import Footer from './pages/Footer.jsx'
-import Login from './pages/Login.jsx'
-import Signup from './pages/signup.jsx'
+import Navbar from './Home/pages/Navbar.jsx'
+import About from './Home/pages/About.jsx'
+import Footer from './Home/pages/Footer.jsx'
+import Login from './Home/pages/Login.jsx'
+import Signup from './Home/pages/Signup.jsx'
 
 import {Route, Routes, Outlet, Navigate } from 'react-router-dom'
-import Contact from './pages/Contact.jsx'
-import Dashboard from './pages/Dashboard.jsx'
+import Contact from './Home/pages/Contact.jsx'
+import Dashboard from './Dashboard/pages/Dashboard.jsx'
 import ErrorPage from './Error-page.jsx'
 
 

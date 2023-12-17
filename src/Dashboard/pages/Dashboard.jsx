@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "./dashboard/Sidebar";
-import { SidebarItem } from "./dashboard/Sidebar";
-import Navbar from "./dashboard/Navbar";
+import Sidebar from "./Sidebar.jsx";
+import { SidebarItem } from "./Sidebar.jsx";
+import Navbar from "./Navbar.jsx";
 import {
   LayoutDashboard,
   MessagesSquare,
@@ -11,7 +11,7 @@ import {
   Settings,
   FolderOpenDot,
 } from "lucide-react";
-import Home from "./dashboard/Home";
+import Home from "./Home.jsx";
 import { Route, Routes, Navigate } from "react-router-dom";
 
 const Dashboard = () => {
