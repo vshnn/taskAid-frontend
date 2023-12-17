@@ -17,6 +17,9 @@ const Navbar = () => (
                 <li>
                     <NavLink className='hover:text-white' to='/contact'>Contact</NavLink>
                 </li>
+                <li>
+                    <a className='hover:text-white' href='/dashboard'>Dashboard</a>
+                </li>
             </ul>
         </div>
     </nav>
