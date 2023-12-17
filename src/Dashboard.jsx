@@ -2,7 +2,7 @@
 const Dashboard = () => {
     return (
         <div>
-        <h1 className="border-2">Dashboard</h1>
+        <h1 className="">Dashboard</h1>
         </div>
     );
 }
