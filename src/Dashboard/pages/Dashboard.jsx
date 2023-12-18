@@ -2,6 +2,9 @@ import React from "react";
 import Sidebar from "./Sidebar.jsx";
 import { SidebarItem } from "./Sidebar.jsx";
 import Navbar from "./Navbar.jsx";
+import Home from "./Home.jsx";
+import { Route, Routes, Navigate } from "react-router-dom";
+
 import {
   LayoutDashboard,
   MessagesSquare,
@@ -11,13 +14,12 @@ import {
   Settings,
   FolderOpenDot,
 } from "lucide-react";
-import Home from "./Home.jsx";
-import { Route, Routes, Navigate } from "react-router-dom";
+
 
 const Dashboard = () => {
   return (
-    <div className="h-screen  max-w-full  flex p-3  bg-gradient-to-t from-black via-black to-gray-900">
-      <Sidebar>
+    <div className="h-screen  max-w-full  flex p-3 ">
+      <Sidebar >
         <SidebarItem
           icon={<LayoutDashboard size={22} color="black" />}
           text="Dashboard"
@@ -57,9 +59,8 @@ const Dashboard = () => {
         />
       </Sidebar>
 
-      <div className=" flex-1 w-full ">
+      <div className=" flex-1 w-full min-h-full ">
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/settings" />

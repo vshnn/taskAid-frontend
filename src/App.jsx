@@ -1,21 +1,20 @@
+import React from 'react'
 import Navbar from './Home/pages/Navbar.jsx'
 import About from './Home/pages/About.jsx'
 import Footer from './Home/pages/Footer.jsx'
 import Login from './Home/pages/Login.jsx'
 import Signup from './Home/pages/Signup.jsx'
-
 import {Route, Routes, Outlet, Navigate } from 'react-router-dom'
 import Contact from './Home/pages/Contact.jsx'
 import Dashboard from './Dashboard/pages/Dashboard.jsx'
 import ErrorPage from './Error-page.jsx'
-
-
-
-
+import { AuthProvider } from './auth.jsx'
+import { RequireAuth } from './RequireAuth.jsx'
 
 const App = () =>{
 
   return(
+    <AuthProvider>
     <Routes>
       <Route path='/' element={<HomeLayout/>}>
         <Route index element = {<About />}/>
@@ -24,17 +23,22 @@ const App = () =>{
         <Route path="/signup" element = {<Signup/>} />
         <Route path="/contact" element = {<Contact/>} />
       </Route>
-      <Route path='/dashboard' element={<DashboardLayout/>}>
-        <Route index element={<Dashboard/>}/>
-      </Route>
-      <Route path='*' element={<ErrorPage/>}/>  
+      <Route path='/dashboard' element={
+        <RequireAuth>
+          <DashboardLayout/>
+        </RequireAuth>
+      }>
+        <Route index element = {<Dashboard/>}/>
+      </Route>  
+      <Route path='/*' element={<ErrorPage/>}/>  
     </Routes>
+    </AuthProvider>
   )  
 }
 
 function HomeLayout(){
   return (
-  <div className="min-h-screen bg-slate-950 overflow-hidden flex flex-col">
+  <div className="min-h-screen bg-slate-950 flex flex-col overflow-x-hidden">
     <Navbar/>
     <Outlet/>
     <Footer />
@@ -45,7 +49,7 @@ function HomeLayout(){
 
 function DashboardLayout(){
   return(
-    <div className="min-h-screen bg-slate-950 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-t from-black via-black to-gray-900 overflow-x-hidden">
     <Outlet/>
     </div>
   )
@@ -53,6 +57,3 @@ function DashboardLayout(){
 
 
 export default App
-
-{/* //<div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div></div>
-//<div class="min-h-screen bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"></div> */}
