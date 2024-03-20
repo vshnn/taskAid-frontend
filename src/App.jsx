@@ -10,6 +10,12 @@ import Dashboard from './Dashboard/pages/Dashboard.jsx'
 import ErrorPage from './Error-page.jsx'
 import { AuthProvider } from './auth.jsx'
 import { RequireAuth } from './RequireAuth.jsx'
+import Sidebar from './user/Sidebar.jsx'
+import Usernavbar from './user/Usernavbar.jsx'
+import Userprofile from './user/Userprofile.jsx'
+import Userdashboard from './user/Userdashboard.jsx'
+import Members from './user/Members.jsx'
+
 
 const App = () =>{
 
@@ -29,7 +35,17 @@ const App = () =>{
         </RequireAuth>
       }>
         <Route index element = {<Dashboard/>}/>
-      </Route>  
+      </Route>
+      <Route path='/dashboard/user' element={<UserLayout/>}>
+        <Route index element = {<Userdashboard/>} />
+        <Route path='/dashboard/user/profile' element={<Userprofile/>}/>
+        <Route path='/dashboard/user/dashboard' element={<Userprofile/>}/>
+        <Route path='/dashboard/user/projects' element={<Userprofile/>}/>
+        <Route path='/dashboard/user/tasks' element={<Userprofile/>}/>
+        <Route path='/dashboard/user/chat' element={<Userprofile/>}/>
+        <Route path='/dashboard/user/members' element={<Members/>}/>
+        <Route path='/dashboard/user/settings' element={<Userprofile/>}/>
+      </Route>
       <Route path='/*' element={<ErrorPage/>}/>  
     </Routes>
     </AuthProvider>
@@ -55,5 +71,19 @@ function DashboardLayout(){
   )
 }
 
+function UserLayout(){
+  return(
+    <div className="min-h-screen bg-[#17191C] text-white ">
+      <div className='flex'>
+        <Sidebar/>
+        <div className='mx-10 w-full'>
+        <Usernavbar />
+        <Outlet/>
+        </div>
+      </div>
+      
+    </div>
+  )
+}
 
 export default App

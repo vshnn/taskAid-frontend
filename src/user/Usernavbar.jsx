@@ -2,16 +2,16 @@ import React from "react";
 import { Home, Settings, Bell, CircleUserRound } from "lucide-react"
 import { NavLink } from 'react-router-dom'
 
-export default  function Navbar() {
+export default  function Usernavbar() {
  
   return (
-    <nav className=" py-5 px-40 min-w-full overflow-hidden xl:w-full rounded-lg  flex justify-between  bg-transparent text-white">
-      <NavLink className='hover:text-slate-400 flex gap-2 font-medium text-xl' to='/'>
-        <Home/>/Dashboard
+    <nav className="flex justify-between pt-10">
+      <NavLink className='hover:text-slate-400 flex gap-2 font-medium text-xl' to='/#'>
+        <Home/>/Dashboard {/*TODO : change based on current path*/}
       </NavLink>
-      <ul className="flex gap-5 mb-4  ">
+      <ul className="flex gap-10 mb-4  ">
         <li>
-            <input className="px-2 py-0.5 border-blue-500 hover:border-red-500 bg-white rounded-2xl font-thin text-black" placeholder="search here"></input>
+            <input className="pl-3 py-0.5 border-blue-500 hover:border-red-500 bg-white rounded-2xl font-thin text-black" placeholder="search here"></input>
         </li>
         <li>
          <NavLink className='hover:text-slate-400' to='/settings'><Settings/></NavLink>
