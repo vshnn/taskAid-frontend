@@ -1,0 +1,47 @@
+/* Combine the styles into one CSS file */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #02033a;
+}
+
+.dashboard-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  padding-left: 5rem;
+}
+
+.dashboard-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit (Chrome, Safari, etc.) */
+}
+
+.container {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the spacing between categories */
+  vertical-align: top; /* Align the categories to the top */
+  margin-top: 3rem;
+}
+
+.container h1 {
+  margin-bottom: 2rem; /* Add space below the category title */
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.projects-row {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure projects stay in a single row */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Adjust the spacing between projects */
+  padding-bottom: 20px; /* Add padding to the bottom to avoid cutting off the last row */
+}
+
+.project-container {
+  flex: 0 0 auto; /* Ensure each project container has fixed width */
+}
+
+.projects-row::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
