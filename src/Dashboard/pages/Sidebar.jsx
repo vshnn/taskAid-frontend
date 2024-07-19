@@ -49,6 +49,17 @@ export default function Sidebar({ children }) {
               <span className="text-xs text-gray-500">johndoe@gmail.com</span>
             </div>
 
+            <div>
+              <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded"
+                onClick={() => {
+                  /* Function to handle creating a new project */
+                }}
+              >
+                New Project
+              </button>
+            </div>
+
             {/* <MoreVertical size={20} /> */}
           </div>
         </div>
